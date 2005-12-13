@@ -1,0 +1,11 @@
+<web-app>
+  <servlet>
+    <servlet-name>PDFServlet</servlet-name>
+    <servlet-class>org.spacebar.escape.web.PDFServlet</servlet-class>
+  </servlet>
+    
+  <servlet-mapping>
+    <servlet-name>PDFServlet</servlet-name>
+    <url-pattern>/PDFServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

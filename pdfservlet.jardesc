@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="/home/agoode/jakarta-tomcat-5.5.9/webapps/escape/WEB-INF/lib/escape-servlet.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/Escape-servlet/pdfservlet.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<file path="/Escape/escape-manifest.txt"/>
+<file path="/Escape/.classpath"/>
+<file path="/Escape/.project"/>
+<file path="/Escape/COPYING"/>
+<javaElement handleIdentifier="=Escape-j2se/src&lt;org.spacebar.escape"/>
+<javaElement handleIdentifier="=Escape-j2se/src&lt;org.spacebar.escape.j2se"/>
+<javaElement handleIdentifier="=Escape-j2se/src&lt;org.spacebar.escape.j2se.resources"/>
+<javaElement handleIdentifier="=Escape/src&lt;org.spacebar.escape.common"/>
+<javaElement handleIdentifier="=Escape/src&lt;org.spacebar.escape.common.hash"/>
+</selectedElements>
+</jardesc>
