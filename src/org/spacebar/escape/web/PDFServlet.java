@@ -18,7 +18,7 @@ import com.lowagie.text.PageSize;
 import com.lowagie.text.Rectangle;
 
 public class PDFServlet extends HttpServlet {
-    private static Map strToPagesize = new HashMap();
+    private static Map<String, Rectangle> strToPagesize = new HashMap<String, Rectangle>();
     static {
         strToPagesize.put("ledger", PageSize.LEDGER);
         strToPagesize.put("legal", PageSize.LEGAL);
@@ -37,6 +37,9 @@ public class PDFServlet extends HttpServlet {
         strToPagesize.put("a10", PageSize.A10);
     }
 
+    private Object synchronizer = new Object();
+    
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         Rectangle pageSize = null;
 
@@ -56,8 +59,7 @@ public class PDFServlet extends HttpServlet {
                     if (item.getFieldName().equals("pagesize")) {
                         String size = item.getString();
                         if (size != null) {
-                            pageSize = (Rectangle) strToPagesize.get(size
-                                    .toLowerCase());
+                            pageSize = strToPagesize.get(size.toLowerCase());
                         }
                     }
                 } else {
@@ -70,7 +72,11 @@ public class PDFServlet extends HttpServlet {
                 pageSize = PageSize.A4;
             }
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            Level2PDF.makePDF(l, pageSize, baos);
+
+            // threadsafe, heh!
+            synchronized (synchronizer) {
+                Level2PDF.makePDF(l, pageSize, baos);
+            }
 
             // setting some response headers
             response.setHeader("Expires", "0");
