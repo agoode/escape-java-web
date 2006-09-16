@@ -6,6 +6,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/Escape-j2se"/>
 	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="lib/commons-fileupload-1.0.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/iText"/>
+	<classpathentry kind="lib" path="/Escape-j2se/lib/itext-1.4.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
