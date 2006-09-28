@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.fileupload.*;
-import org.spacebar.escape.Level2PDF;
 import org.spacebar.escape.common.BitInputStream;
 import org.spacebar.escape.common.Level;
+import org.spacebar.escape.pdf.Level2PDF;
 
 import com.lowagie.text.PageSize;
 import com.lowagie.text.Rectangle;
