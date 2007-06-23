@@ -2,10 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Escape"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Escape-j2se"/>
 	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="lib/commons-fileupload-1.0.jar"/>
-	<classpathentry kind="lib" path="/Escape-j2se/lib/itext-1.4.5.jar"/>
+	<classpathentry kind="lib" path="/home/adam/workspace/escape-j2se/lib/itext-1.4.5.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/escape-j2se"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/escape-java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
