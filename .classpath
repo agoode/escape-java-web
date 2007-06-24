@@ -4,8 +4,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="lib/commons-fileupload-1.0.jar"/>
-	<classpathentry kind="lib" path="/home/adam/workspace/escape-j2se/lib/itext-1.4.5.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/escape-j2se"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/escape-java-apps"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/escape-java"/>
+	<classpathentry kind="lib" path="/escape-java-apps/lib/itext-1.4.5.jar" sourcepath="/iText/src"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
