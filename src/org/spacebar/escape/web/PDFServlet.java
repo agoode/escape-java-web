@@ -37,8 +37,6 @@ public class PDFServlet extends HttpServlet {
         strToPagesize.put("a10", PageSize.A10);
     }
 
-    private Object synchronizer = new Object();
-    
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         Rectangle pageSize = null;
@@ -73,10 +71,7 @@ public class PDFServlet extends HttpServlet {
             }
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-            // threadsafe, heh!
-            synchronized (synchronizer) {
-                Level2PDF.makePDF(l, pageSize, baos);
-            }
+            (new Level2PDF()).makePDF(l, pageSize, baos);
 
             // setting some response headers
             response.setHeader("Expires", "0");
